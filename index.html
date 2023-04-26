@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     div {
+border: 1px solid red;
+    }
+</style>
+<body>
+    <div id="div"></div>
+   
+</body>
+<script>
+    let div_count = +prompt("Введите количество блоков DIV:");
+    let img_count = +prompt("Введите количество картинов в блоке  (от 1 до 11) :");
+
+    let mydivs = "";
+    
+    for (i=1;i<=div_count;i++)
+    {
+    mydivs += `<div>`;
+        for (y=1;y <=img_count;y++)
+        {
+            mydivs += `<img src="/images/${y}.jpg">`;
+        }
+          
+        
+        mydivs += "</div>";
+    }
+    div.innerHTML = mydivs;
+</script>
+</html>
